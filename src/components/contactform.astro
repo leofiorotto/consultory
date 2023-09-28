@@ -2,6 +2,8 @@
 import Button from "./ui/button.astro";
 ---
 
+
+
 <form
   action="https://api.web3forms.com/submit"
   method="POST"
@@ -20,6 +22,7 @@ import Button from "./ui/button.astro";
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
       Por favor proporciona un nombre.
     </div>
+   
   </div>
   <div class="mb-5">
     <label for="email_address" class="sr-only">Email Address</label><input
@@ -28,8 +31,7 @@ import Button from "./ui/button.astro";
       placeholder="Email"
       name="email"
       required
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
-    />
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"/>
     <div class="empty-feedback text-red-400 text-sm mt-1">
       Por favor proporciona un correo electrónico válido.
     </div>
@@ -42,8 +44,7 @@ import Button from "./ui/button.astro";
       name="message"
       required
       placeholder="Tu mensaje"
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
-    ></textarea>
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"></textarea>
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
       Por favor proporciona un mensaje.
     </div>
