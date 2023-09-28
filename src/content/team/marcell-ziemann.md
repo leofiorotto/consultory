@@ -1,9 +1,9 @@
 ---
 draft: false
-name: "Marcell Ziemann"
-title: "Principal Strategist"
+name: "Leandro Fiorotto"
+title: "Desarrollador front end"
 avatar: {
-    src: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280",
+    src: "https://avatars.githubusercontent.com/u/70485779?v=4",
     alt: "Marcell Ziemann"
 }
 publishDate: "2022-11-08 15:39"
