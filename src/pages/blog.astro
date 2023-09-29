@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import { Picture } from "@astrojs/image/components";
-import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
@@ -15,63 +14,68 @@ const publishedBlogEntries = await getCollection("blog", ({ data }) => {
 publishedBlogEntries.sort(function (a, b) {
   return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
 });
+
+
 ---
-
-<Layout title="Blog">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">Lo que pidieron nuestros clientes</Fragment>
-      <Fragment slot="desc">
-        Todos los proyectos son realizados por el equipo de profesionales con el objetivo de satisfacer las necesidades de nuestros clientes.
-      </Fragment>
-    </Sectionhead>
-    <main class="mt-16">
-      <ul class="grid gap-16 max-w-4xl mx-auto">
-        {
-          publishedBlogEntries.map((blogPostEntry, index) => (
-            <li>
-              <a href={`/blog/${blogPostEntry.slug}`}>
-                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                  <Picture
-                    src={blogPostEntry.data.image.src}
-                    alt={blogPostEntry.data.image.alt}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    widths={[200, 400, 800]}
-                    aspectRatio="16:9"
-                    background="#ffffff"
-                    fit="cover"
-                    position="center"
-                    loading={index <= 2 ? "eager" : "lazy"}
-                    decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md"
-                  />
-                  <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {blogPostEntry.data.category}
-                    </span>
-
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {blogPostEntry.data.title}
-                    </h2>
-
-                    <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
-                        {blogPostEntry.data.author}
-                      </span>
-                      <span class="text-gray-400">• </span>
-                      <time
-                        class="text-gray-400"
-                        datetime={blogPostEntry.data.publishDate.toISOString()}>
-                        {blogPostEntry.data.publishDate.toDateString()}
-                      </time>
+<div id="blog" class="pb-32 ">
+  <hr class="p-8 border-t border-blue-500 font-montserrat">
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">Lo que pidieron nuestros clientes</Fragment>
+        <Fragment slot="desc">
+          Todos los proyectos son realizados por el equipo de profesionales con el objetivo de satisfacer las necesidades de nuestros clientes.
+        </Fragment>
+      </Sectionhead>
+      <main class="mt-16">
+        <ul class="flex mx-auto gap-5">
+          {
+            publishedBlogEntries.map((blogPostEntry, index) => (
+              <li class="border-grey border-4 p-4 rounded-md">
+                <a href={`/blog/${blogPostEntry.slug}`}>
+                  <div class="flex flex-col md:grid-cols-2 gap-5 md:gap-10 items-center">
+                    <Picture
+                      src={blogPostEntry.data.image.src}
+                      alt={blogPostEntry.data.image.alt}
+                      sizes="(max-width: 800px) 100vw, 800px"
+                      widths={[200, 400, 800]}
+                      aspectRatio="16:9"
+                      background="#ffffff"
+                      fit="cover"
+                      position="center"
+                      loading={index <= 2 ? "eager" : "lazy"}
+                      decoding={index <= 2 ? "sync" : "async"}
+                      class="w-full rounded-md"
+                    />
+                    <div class="flex flex-col">
+                      <div class="flex flex-col">
+                        <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                          {blogPostEntry.data.category}
+                        </span>
+        
+                        <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                          {blogPostEntry.data.title}
+                        </h2>
+                      </div>
+        
+                      <div class="flex flex-col gap-2 mt-3">
+                        <span class="text-gray-400">
+                          {blogPostEntry.data.author}
+                        </span>
+                        <time
+                          class="text-gray-400"
+                          datetime={blogPostEntry.data.publishDate.toISOString()}>
+                          {blogPostEntry.data.publishDate.toDateString()}
+                        </time>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </main>
-  </Container>
-</Layout>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </main>
+    </Container>
+
+</div>
+

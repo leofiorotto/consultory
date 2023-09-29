@@ -10,9 +10,10 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 ---
+<div id="about">
+  <Container class="pb-32">
+    <hr class="p-8 border-t border-blue-500 font-montserrat">
 
-<Layout title="About">
-  <Container>
     <Sectionhead>
       <Fragment slot="title">Nosotros</Fragment>
       <Fragment slot="desc">Somos un equipo apasionado por lo que hace</Fragment>
@@ -57,4 +58,5 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       }
     </div>
   </Container>
-</Layout>
+</div>
+ 

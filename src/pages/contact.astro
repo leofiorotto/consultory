@@ -6,8 +6,9 @@ import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon";
 ---
 
-<Layout title="Contact">
-  <Container>
+<div id="contact">
+  <Container class="pb-16">
+    <hr class="p-8 border-t border-blue-500 font-montserrat">
     <Sectionhead>
       <Fragment slot="title">Contacto</Fragment>
       <Fragment slot="desc">Envianos un mensaje si necesitas</Fragment>
@@ -48,4 +49,7 @@ import { Icon } from "astro-icon";
       </div>
     </div>
   </Container>
-</Layout>
+
+
+</div>
+ 

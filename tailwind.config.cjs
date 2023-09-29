@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
         sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
       },
     },

@@ -63,9 +63,8 @@ const pricing = [
   },
 ];
 ---
-
-<Layout title="Pricing">
-  <Container>
+<div title="pricing" id="pricing">
+  <Container class='py-24' >
     <Sectionhead>
       <Fragment slot="title">Nuestro servidor de CS</Fragment>
       <Fragment slot="desc">
@@ -77,4 +76,6 @@ const pricing = [
       {pricing.map((item) => <PricingCard plan={item} />)}
     </div>
   </Container>
-</Layout>
+
+</div>
+
