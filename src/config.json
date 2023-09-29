@@ -1,0 +1,33 @@
+{
+  "showAmazonTag": false,
+  "showCountingSell": false,
+  "showBuyAudiobookButton": false,
+  "seo": {
+    "title": "Livro Chapada do Corisco por Alisson Carvalho",
+    "description": "Um remador solitário e a tragédia que maculou a história da vila de pescadores",
+    "canonical": "https://www.livrochapadadocorisco.com",
+    "locale": "pt_BR",
+    "image": "/og_image_800_600_2.png"
+  },
+  "theme": {
+    "color": "#8a3bbf"
+  },
+  "author": {
+    "name": "Alisson Carvalho",
+    "email": "alissonmssc@gmail.com",
+    "location": "Teresina, Piauí",
+    "twitterUrl": "https://twitter.com/rascunholiquido",
+    "instagramUrl": "https://www.instagram.com/rascunhosliquidos/",
+    "linkedinUrl": "https://www.linkedin.com/in/alisson-carvalho-854bb0131/"
+  },
+  "book": {
+    "title": "Chapada do Corisco",
+    "isbn": "978-65-89313-54-0",
+    "releaseDate": "2022-03-28",
+    "price": "34.9",
+    "currency": "BRL",
+    "buyPhysicalUrl": "https://www.arteimpressaeditora.com.br/product-page/chapada-do-corisco-alisson-carvalho",
+    "buyDigitalUrl": "https://www.amazon.com.br/Chapada-do-Corisco-Alisson-Carvalho-ebook/dp/B09WTD7RW9/",
+    "buyAudiobookUrl": "#"
+  }
+}

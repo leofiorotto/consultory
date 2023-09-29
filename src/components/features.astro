@@ -1,6 +1,7 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
+import Feature from "../components/Feature1.astro";
 
 const features = [
   {
@@ -51,21 +52,41 @@ const features = [
     </p>
   </div>
   
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-    {
-      features.map((item) => (
-        <div class="flex gap-4 items-start">
-          <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-            <Icon class="text-white" name={item.icon} />
-          </div>
+  <section class="my-8">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:briefcase" title="Calidad" class="text-xl">
+          La calidad es nuestra máxima prioridad. Estamos comprometidos a entregar soluciones confiables y de alta calidad para satisfacer las necesidades de nuestros clientes.
+        </Feature>
+        <Feature icon="bx:bxs-window-alt" title="Confianza">
           <div>
-            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            Priorizamos la confiabilidad y la consistencia, brindando soluciones que cumplen y superan las expectativas de nuestros clientes. Nuestro enfoque en la calidad, la eficiencia y la confianza nos permite construir asociaciones duraderas con nuestros clientes.
           </div>
-        </div>
-      ))
-    }
-  </div>
+        </Feature>
+        <Feature title="Despliegue">
+          Nuestro enfoque de despliegue eficiente y ágil utiliza las últimas tecnologías y las mejores prácticas de la industria para garantizar la entrega oportuna de proyectos que maximicen los resultados comerciales de nuestros clientes. 
+        </Feature>
+        <Feature icon="bx:bxs-user" title="Equipo">
+          Nuestro equipo de expertos en tecnología está compuesto por ingenieros de software, diseñadores de UX, desarrolladores de aplicaciones móviles, ingenieros de DevOps, ingenieros de automatización de pruebas y más. 
+        </Feature>
+        <Feature icon="mdi:book-open-page-variant" title="SEO">
+          Nuestro equipo de expertos en SEO se mantiene al día con las últimas tendencias y técnicas de SEO para garantizar que su sitio web se clasifique en la parte superior de los resultados de búsqueda. 
+        </Feature>
+        <Feature icon="mdi:looks"  title="Ambiente de trabajo">
+          Nuestro ambiente de trabajo es amigable y acogedor. Lo que nos permite aprovechar una amplia gama de perspectivas y experiencias para brindar soluciones innovadoras a nuestros clientes.
+        </Feature>
+        <!-- <Feature icon="mdi:theme-light-dark" title="Dark mode">
+          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
+        </Feature>
+        <Feature icon="mdi:cog" title="Design System">
+          The theme offers some very handy utilities to help you build your website faster.
+        </Feature>
+        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
+          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
+        </Feature> -->
+      </div>
+    </div>
+  </section>
 </div>
 
 

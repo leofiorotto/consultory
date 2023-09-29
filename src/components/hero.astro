@@ -4,8 +4,14 @@ import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
+<script>
+  const changeDarkMode = () => {
+    document.documentElement.classList.add("dark");
+  };
+</script>
 
-<main
+
+  <main
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
@@ -28,6 +34,7 @@ import { Icon } from "astro-icon";
       Nuestro equipo de expertos en tecnología está listo para ayudarte a alcanzar tus objetivos.
       Siempre comprometidos con la calidad y la excelencia.
     </p>
+   
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
         href="#"
@@ -45,8 +52,15 @@ import { Icon } from "astro-icon";
         href="/about"
         class="flex gap-1 items-center justify-center"
         target="_blank">
-        Conoce más de nosotros
+        Conoce mas de nosotros
       </Link>
     </div>
+
+  <button 
+  class="bg-gray-700 text-white p-4 rounded-xl"
+  @click="changeDarkMode">
+  DarkMode
+</button>
+ 
   </div>
 </main>

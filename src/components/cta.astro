@@ -1,5 +1,7 @@
 ---
 import Link from "./ui/link.astro";
+
+const title = "Documentación del Proceso";
 ---
 
 <section class="bg-white pt-32 px-4 sm:px-6 lg:px-8 mt-16 mb-16">
@@ -11,22 +13,92 @@ import Link from "./ui/link.astro";
         Aquí debes proporcionar una descripción detallada del proceso que estás documentando. Puedes incluir los pasos a seguir, los recursos necesarios y cualquier otra información relevante.
       </p>
     </div>
-    <div class="mt-16">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">
-        Cómo documentamos
-      </h2>
-      <ol class="list-decimal list-inside text-lg text-gray-500">
-        <li>Identificar los objetivos y resultados esperados del proceso.</li>
-        <li>Enumerar los pasos necesarios para llevar a cabo el proceso.</li>
-        <li>Detallar cualquier recurso o herramienta necesario.</li>
-        <li>Registrar cualquier variante o escenario especial que pueda surgir.</li>
-        <li>Revisar y validar la documentación para asegurar su precisión y claridad.</li>
-      </ol>
+    <head>
+      <title>{title}</title>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    </head>
+
+    <head>
+      <title>{title}</title>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    </head>
+    <div class="flex justify-between gap-10 relative">
+
+      <div class="container mx-auto w-full">
+        <h1 class="text-2xl font-bold mb-4">{title}</h1>
+    
+        <div class="relative">
+          <!-- Primer nivel -->
+          <div class="mb-4 ml-8">
+            <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-0 top-1/2 transform -translate-y-1/2"></div>
+            <div class="border-l border-blue-500 pl-6">
+              <div class="flex items-center mb-2">
+                <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+                <div class="ml-2">Identificar Objetivos</div>
+              </div>
+              <p class="text-gray-700">Describe aquí los objetivos y resultados esperados del proceso.</p>
+            </div>
+          </div>
+    
+          <!-- Segundo nivel -->
+          <div class="mb-4 ml-16">
+            <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-0 top-1/2 transform -translate-y-1/2"></div>
+            <div class="border-l border-blue-500 pl-6">
+              <div class="flex items-center mb-2">
+                <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+                <div class="ml-2">Enumerar Pasos</div>
+              </div>
+              <p class="text-gray-700">Enumera los pasos necesarios para llevar a cabo el proceso.</p>
+            </div>
+          </div>
+    
+          <!-- Tercer nivel -->
+          <div class="mb-4 ml-24">
+            <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-0 top-1/2 transform -translate-y-1/2"></div>
+            <div class="border-l border-blue-500 pl-6">
+              <div class="flex items-center mb-2">
+                <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+                <div class="ml-2">Detallar Recursos</div>
+              </div>
+              <p class="text-gray-700">Detalla cualquier recurso o herramienta necesario.</p>
+            </div>
+          </div>
+    
+          <!-- Cuarto nivel -->
+          <div class="mb-4 ml-32">
+            <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-0 top-1/2 transform -translate-y-1/2"></div>
+            <div class="border-l border-blue-500 pl-6">
+              <div class="flex items-center mb-2">
+                <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
+                <div class="ml-2">Registrar Variantes</div>
+              </div>
+              <p class="text-gray-700">Registra cualquier variante o escenario especial que pueda surgir.</p>
+            </div>
+          </div>
+    
+          <!-- Quinto nivel -->
+          <div class="ml-40">
+            <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-0 top-1/2 transform -translate-y-1/2"></div>
+            <div class="border-l border-blue-500 pl-6">
+              <div class="flex items-center mb-2">
+                <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">5</div>
+                <div class="ml-2">Revisar y Validar</div>
+              </div>
+              <p class="text-gray-700">Revisa y valida la documentación para asegurar su precisión y claridad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-center content-center ml-32 absolute right-0 top-0">
+        <img src="https://neilpatel.com/wp-content/uploads/2020/10/image1-15.png" alt="Imagen de ejemplo" class="rounded-lg shadow-lg w-96 h-auto">
+        <img src="https://www.zohowebstatic.com/sites/default/files/cliq/images/click-vs-slack-mutichat.jpg" alt="Imagen de ejemplo" class="rounded-lg shadow-lg w-96 h-auto">
+      </div>
     </div>
 
-    <div class="mt-16 flex justify-center">
-      <img src="https://neilpatel.com/wp-content/uploads/2020/10/image1-15.png" alt="Imagen de ejemplo" class="rounded-lg shadow-lg w-1/2 h-auto">
-      <img src="https://www.zohowebstatic.com/sites/default/files/cliq/images/click-vs-slack-mutichat.jpg" alt="Imagen de ejemplo" class="rounded-lg shadow-lg ml-4 w-1/2 h-auto">
     </div>
-  </div>
+  
+   
+
+
 </section>

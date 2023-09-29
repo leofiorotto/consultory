@@ -10,21 +10,25 @@ import Blog from "./blog.astro";
 import About from "./about.astro";
 import Contact from "./contact.astro";
 import BoxContact from "@components/boxContact.astro";
-import Working from "@components/working.astro";
+// import Working from "@components/working.astro";
 ---
+<div data-theme="dark">
+  <div class="dark:bg-slate-900">
+    <Layout title="">
+      <Container>
+        <Hero />
+        <Features />
+        <Logos />
+        <Cta />
+        <Pricing />
+        <Blog />
+        <About />
+        <BoxContact />
+        <Contact />
+        <!-- <Working /> -->
+      </Container>
+    </Layout>
 
-<Layout title="">
-  <Container>
-    <Hero />
-    <Features />
-    <Logos />
-    <Cta />
-    <Pricing />
-    <Blog />
-    <About />
-    <BoxContact />
-    <Contact />
-    <Working />
-  </Container>
+  </div>
 
-</Layout>
+</div>

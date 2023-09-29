@@ -1,81 +1,100 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import PricingCard from "@components/pricing.astro";
-
-const pricing = [
-  {
-    name: "Personal",
-    price: "Free",
-    popular: false,
-    features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "/",
-    },
-  },
-  {
-    name: "Startup",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
-    popular: true,
-    features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "#",
-    },
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    popular: false,
-    features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
-    ],
-    button: {
-      text: "Contact us",
-      link: "/contact",
-    },
-  },
-];
+import { showBuyAudiobookButton, showAmazonTag, book } from "../config.json";
+const appStoreIconSrc = '/ruta/al/icono/app-store.png'; // Asegúrate de tener la ruta correcta
+const googlePlayIconSrc = '/ruta/al/icono/google-play.png';
 ---
-<div title="pricing" id="pricing">
-  <Container class='py-24' >
-    <Sectionhead>
-      <Fragment slot="title">Nuestro servidor de CS</Fragment>
-      <Fragment slot="desc">
-        Puedes adquirir el plan que más se adapte a tus necesidades
-      </Fragment>
-    </Sectionhead>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {pricing.map((item) => <PricingCard plan={item} />)}
+<main
+  class="mx-auto max-w-screen-xl px-4 py-28 mb-8 mt-12 sm:mt-12 sm:mb-12 sm:px-6 md:mt-32 md:mb-20 xl:mt-23 xl:mb-24"
+>
+  <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+    <div class="mb-12 md:max-w-1xl md:mx-auto lg:col-span-8">
+      {
+        showAmazonTag && (
+          <div class="text-base uppercase tracking-wide mb-4">
+            <img
+              class="inline h-5 relative"
+              style="top:3px"
+              src="/amazon.svg"
+              alt="amazon.com"
+            />{" "}
+            best-seller
+          </div>
+        )
+      }
+
+      <h1
+        class="mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl uppercase"
+      >
+      Despliegue sin <!-- -->&nbsp;<br class="hidden md:inline" /><span
+          class="underline">esfuerzo</span
+        >
+      </h1><p
+        class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-body"
+      >
+      Nos encargamos de todo el proceso de despliegue en la tienda de aplicaciones, ya sea para Android o iOS. Nuestro equipo de expertos se encargará de todo el proceso de publicación de la aplicación en las tiendas de aplicaciones, para que no tengas que preocuparte por nada.
+      </p><p
+        class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-body"
+      >
+      Nuestro equipo de expertos se encargará de todo el proceso de publicación de la aplicación en las tiendas de aplicaciones, para que no tengas que preocuparte por nada.
+      </p>
+      <p
+        class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-body"
+      >
+      Nuestro equipo de expertos se encargará de todo el proceso de publicación de la aplicación en las tiendas de aplicaciones, para que no tengas que preocuparte por nada.
+      </p>
+      <div>
+        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start flex gap-6">
+          <div>
+            <button
+              class="w-full flex items-center justify-center border border-transparent text-base leading-6 rounded-md font-semibold text-white bg-black hover:bg-violet-200 focus:outline-none transition duration-300 ease-in-out md:py-2 md:text-lg md:px-4">
+              <div>
+                <p class="text-gray-100 text-sm">Dowload in</p>
+                <h2> App store</h2>
+            </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-apple" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M9 7c-3 0 -4 3 -4 5.5c0 3 2 7.5 4 7.5c1.088 -.046 1.679 -.5 3 -.5c1.312 0 1.5 .5 3 .5s4 -3 4 -5c-.028 -.01 -2.472 -.403 -2.5 -3c-.019 -2.17 2.416 -2.954 2.5 -3c-1.023 -1.492 -2.951 -1.963 -3.5 -2c-1.433 -.111 -2.83 1 -3.5 1c-.68 0 -1.9 -1 -3 -1z" />
+                <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" />
+              </svg>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center justify-center border border-transparent text-base leading-6 rounded-md font-semibold text-white bg-black hover:bg-violet-200 focus:outline-none transition duration-300 ease-in-out md:py-2 md:text-lg md:px-4">
+              <div>
+                  <p class="text-gray-100 text-sm">Dowload in</p>
+                  <h2> Google play</h2>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google-play" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607z" />
+                <path d="M15 9l-10.5 11.5" />
+                <path d="M4.5 3.5l10.5 11.5" />
+              </svg>
+          </button>
+          </div>
+        </div><p class="mt-3 text-sm text-book-gray sm:mt-5 sm:text-base">
+         <a
+            href="#contact"
+            class="underline transition ease-in-out duration-300 text-2xl font-montserrat font-black"
+            >NO DUDE EN CONTARCARNOS</a
+          > <br>
+        </p>
+      </div>
     </div>
-  </Container>
-
-</div>
-
+    
+    <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-4 lg:flex lg:items-center">
+      <a class="book-container" href="#ebook">
+        <div class="book">
+          <img
+            src="../src/assets/cover-1.jpg"
+            width={300}
+            height={600}
+            alt={book.title}
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
