@@ -1,31 +1,16 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
+import Feature from "../components/Feature1.astro";
+
 ---
-
-
-
-<div class="w-full font-montserrat">
-    <div class="flex flex-col items-center justify-center w-[80%] m-auto">
-      <div class="dark:bg-slate-50 p-12 rounded-lg shadow-[-2px_1px_38px_25px_#8a3bbf,-2px_1px_15px_10px_#2f855a] flex flex-col gap-10">
-        <div>
-          <h1 class="text-6xl font-bold text-transparent bg-clip-text text-black text-center p-4">
-            ¡Pruebe nuestro servicio ahora!
-          </h1>
-          <div class="w-full h-2 bg-gradient-to-r from-hsl-160-100-33 to-cyan-500 animate-pulse"></div>
-        </div>
-        <div class="flex w-full gap-8">
-          <p class="text-slate-700 font-semibold text-xl">
-            Dé el primer paso hacia la transformación de su negocio con nuestros servicios expertos. Lo invitamos a probar nuestras soluciones móviles hoy y experimentar la diferencia por sí mismo. Desde el desarrollo de software hasta el desarrollo de aplicaciones móviles, estamos aquí para ayudarlo a lograr sus objetivos.
-          </p>
+<div class="w-full font-montserrat shadow-[-1px_1px_15px_15px_#8a3bbf,-1px_1px_15px_10px_#2f855a]">
+  <section class="my-8 w-full">
+        <Feature icon="mdi:email" title="Pruebe nuestro servicio ahora" class="w-full	text-8xl">
+          <p class="text-3xl font-montserrat text-purple-600 font-bold"> De el primer paso hacia la transformacion de su negocio con nuestros servicios expertos. Lo invitamos a probar nuestras soluciones moviles hoy y experimentar la diferencia por si mismo. Desde el desarrollo de software hasta el desarrollo de aplicaciones moviles, estamos aqui para ayudarlo a lograr sus objetivos.</p>
           <div class=" items-center justify-center flex">
-            <button
-              class="rounded-md p-4 text-slate-200 bg-purple-700 font-montserrat"
-            >
-              Escribenos!
-            </button>
+            <button class="rounded-md p-4 text-slate-200 bg-purple-700 font-montserrat">Escribenos</button>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </Feature>
+  </section>
+</div>
