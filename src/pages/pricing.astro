@@ -1,7 +1,6 @@
 ---
 import { showBuyAudiobookButton, showAmazonTag, book } from "../config.json";
-const appStoreIconSrc = '/ruta/al/icono/app-store.png'; // Asegúrate de tener la ruta correcta
-const googlePlayIconSrc = '/ruta/al/icono/google-play.png';
+import ImgBook from "../assets/cover-1.jpg"
 ---
 
 <main
@@ -90,7 +89,7 @@ const googlePlayIconSrc = '/ruta/al/icono/google-play.png';
       <a class="book-container" href="#ebook">
         <div class="book">
           <img
-            src="../src/assets/cover-1.jpg"
+            src={"../src/assets/portada.png"}
             width={300}
             height={600}
             alt={book.title}
