@@ -23,6 +23,9 @@ const { Content } = await entry.render();
       <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
         {entry.data.category}
       </span>
+      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+        {entry.data.link}
+      </span>
       <h1
         class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
         {entry.data.title}
@@ -53,7 +56,7 @@ const { Content } = await entry.render();
     </div>
     <div class="text-center mt-8">
       <a
-        href="/blog"
+        href="/#blog"
         class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
         >← Back to Blog</a
       >

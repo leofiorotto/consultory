@@ -17,10 +17,10 @@ publishedBlogEntries.sort(function (a, b) {
 
 
 ---
-<div id="blog" class="pb-32 ">
+<div id="blog" class="pb-32 font-montserrat">
     <Container>
       <Sectionhead>
-        <Fragment slot="title" class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center">Lo que pidieron nuestros clientes</Fragment>
+        <Fragment slot="title" class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center font-montserrat">Algunos de nuestros clientes destacados</Fragment>
         <Fragment slot="desc">
           Todos los proyectos son realizados por el equipo de profesionales con el objetivo de satisfacer las necesidades de nuestros clientes.
         </Fragment>
@@ -29,13 +29,13 @@ publishedBlogEntries.sort(function (a, b) {
         <ul class="flex flex-wrap justify-around">
           {
             publishedBlogEntries.map((blogPostEntry, index) => (
-              <li class="border-grey border-4 p-4 rounded-md w-96">
-                <a href={`/blog/${blogPostEntry.slug}`}>
-                  <div class="flex flex-col md:grid-cols-2 gap-5 md:gap-10 items-center">
+              <li class="border-gray-300 border-4 rounded-md w-96">
+                <a href={`${blogPostEntry.data.author}`}>
+                  <div class="flex flex-col md:grid-cols-2 md:gap-5 text-left">
                     <Picture
                       src={blogPostEntry.data.image.src}
                       alt={blogPostEntry.data.image.alt}
-                      sizes="(max-width: 800px) 100vw, 800px"
+                      sizes="(max-width: 800px) 150vw, 800px"
                       widths={[200, 400, 800]}
                       aspectRatio="16:9"
                       background="#ffffff"
@@ -43,11 +43,10 @@ publishedBlogEntries.sort(function (a, b) {
                       position="center"
                       loading={index <= 2 ? "eager" : "lazy"}
                       decoding={index <= 2 ? "sync" : "async"}
-                      class="w-full rounded-md"
+                      class="w-full border-b-4 border-gray-300"
                     />
-                    <div class="flex flex-col">
-                      <div class="flex flex-col">
-                        <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                      <div class="text-left pl-4 pb-2">
+                        <span class="text-blue-400 uppercase tracking-wider text-sm font-medium relative left-0">
                           {blogPostEntry.data.category}
                         </span>
         
@@ -55,18 +54,6 @@ publishedBlogEntries.sort(function (a, b) {
                           {blogPostEntry.data.title}
                         </h2>
                       </div>
-        
-                      <div class="flex flex-col gap-2 mt-3">
-                        <span class="text-gray-400">
-                          {blogPostEntry.data.author}
-                        </span>
-                        <time
-                          class="text-gray-400"
-                          datetime={blogPostEntry.data.publishDate.toISOString()}>
-                          {blogPostEntry.data.publishDate.toDateString()}
-                        </time>
-                      </div>
-                    </div>
                   </div>
                 </a>
               </li>
