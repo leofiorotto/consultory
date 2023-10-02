@@ -13,18 +13,16 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <div id="about">
   <Container class="pb-32 w-full">
 
-    <Sectionhead>
+    <!-- <Sectionhead>
       <Fragment slot="title">Nosotros</Fragment>
       <Fragment slot="desc">Somos un equipo apasionado por lo que hace</Fragment>
-    </Sectionhead>
+    </Sectionhead> -->
+
+    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center">Nuestro equipo</h2>
+    <p class="mt-4 text-lg text-gray-500 font-montserrat text-center">
+      Cada uno es profesional en su area y asi nos complementamos, contamos con 3 personas, todos con el mismo objetivo, brindar un servicio de calidad y que nuestros clientes queden satisfechos </p>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Cada uno es profesional en su area y asi nos complementamos
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        Nuestro equipo actualmente cuenta con 3 personas, cada una con su propia especialidad, pero todos con un mismo objetivo, brindar un servicio de calidad y que nuestros clientes queden satisfechos.
-      </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
