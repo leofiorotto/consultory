@@ -26,11 +26,23 @@ const menuitems = [
   },
 ];
 ---
+
+<style>
+  /* Estilo para fijar la barra de navegación en la parte superior */
+  .fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Cambia el color de fondo según tus preferencias */
+    z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
+  }
+</style>
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5 font-bold text-lg">
+  <header class="flex flex-col lg:flex-row justify-between items-center py-5 font-bold text-lg fixed-navbar bg-gray-200">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg flex">
+        <a href="/" class="text-lg flex pl-8">
           <img
             src="https://flowbite.com/docs/images/logo.svg"
             class="h-8 mr-3"
@@ -51,7 +63,7 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+                      class="flex lg:px-3 py-2 text-black hover:text-purple-900">
                       {item.title}
                     </a>
                   </li>
