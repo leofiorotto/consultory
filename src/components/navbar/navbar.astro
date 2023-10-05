@@ -9,7 +9,7 @@ const menuitems = [
     path: "#servicios",
   },
   {
-    title: "¿Como trabajamos?",
+    title: " ¿Como trabajamos?",
     path: "#herramientas",
   },
   {
@@ -34,12 +34,11 @@ const menuitems = [
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white; /* Cambia el color de fondo según tus preferencias */
     z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
   }
 </style>
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center py-5 font-bold text-lg fixed-navbar bg-gray-200">
+  <header class="flex flex-col lg:flex-row justify-between items-center py-5 font-bold text-lg fixed-navbar border-b border-gray-400">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg flex pl-8">
@@ -48,10 +47,10 @@ const menuitems = [
             class="h-8 mr-3"
             alt="FlowBite Logo"
           />
-          <span class="font-bold text-slate-800">Biztek Solutions</span>
+          <span class="font-bold ">Biztek Solutions</span>
         </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+          <MenuIcon class="w-4 h-4 " />
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
@@ -63,7 +62,7 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-black hover:text-purple-900">
+                      class="flex lg:px-3 py-2 hover:text-purple-900">
                       {item.title}
                     </a>
                   </li>

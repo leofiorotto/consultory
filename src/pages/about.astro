@@ -12,7 +12,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 ---
 <div id="about">
   <Container class="pb-32 pt-32 w-full">
-    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center font-monserrat">Nuestro equipo</h2>
+    <h2 class="text-3xl font-extrabold sm:text-4xl text-center font-monserrat">Nuestro equipo</h2>
     <p class="mt-4 text-lg text-gray-500 font-montserrat text-center">
       Cada uno es profesional en su area y asi nos complementamos, contamos con 3 personas, todos con el mismo objetivo, brindar un servicio de calidad y que nuestros clientes queden satisfechos </p>
 
@@ -37,7 +37,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
             </div>
 
             <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">
+              <h2 class="text-lg">
                 {teamMemberEntry.data.name}
               </h2>
               <h3 class="text-sm text-slate-500">

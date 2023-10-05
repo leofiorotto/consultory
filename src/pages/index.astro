@@ -11,8 +11,18 @@ import About from "./about.astro";
 import Contact from "./contact.astro";
 import BoxContact from "@components/boxContact.astro";
 ---
-<div data-theme="dark">
-  <div class="dark:bg-slate-900">
+<style>
+  html.dark {
+      background-color: #060430;
+      color: #fff;
+    }
+    
+    .dark .nav-links a {
+      color: #fff;
+    }
+  </style>
+<div>
+  <div>
     <Layout title="">
       <Container>
         <Hero />

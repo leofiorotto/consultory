@@ -7,11 +7,11 @@ import Link from "./ui/link.astro";
 const title = "Documentacion del Proceso";
 ---
 
-<section class="bg-white pt-32 wrapper" id="proceso">
+<section class="pt-32 wrapper" id="proceso">
   <div class="max-w-7xl mx-auto">
     <div class="text-center">
-      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Documentamos nuestro proceso y aplicamos metodologias agiles</h2>
-      <p class="mt-4 text-lg text-gray-500">
+      <h2 class="text-3xl font-extrabold sm:text-4xl">Documentamos nuestro proceso y aplicamos metodologias agiles</h2>
+      <p class="mt-4 text-lg">
         Nuestro proceso de desarrollo de software se basa en metodologias agiles, documentamos cada paso del proceso para que nuestros clientes puedan ver el progreso de su proyecto en tiempo real.
       </p>
     </div>
@@ -67,15 +67,15 @@ const title = "Documentacion del Proceso";
 }
 
 .wrapper {
-  --color: rgba(30, 30, 30);
+ ;
   min-height: 100vh;
   display: grid;
   align-content: center;
   gap: 2rem;
   padding: 2rem;
   font-family: "Poppins", sans-serif;
-  color: var(--color);
-  background: var(--bgColor);
+  
+
 }
 
 h1 {
@@ -126,18 +126,13 @@ ul li .date {
   --dateH: 3rem;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
-
   text-align: center;
   background-color: var(--accent-color);
-
-  color: white;
   font-size: 1.25rem;
   font-weight: 700;
-
   display: grid;
   place-content: center;
   position: relative;
-
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
 }
 
@@ -161,7 +156,6 @@ ul li .date::after {
   position: absolute;
   width: 2rem;
   aspect-ratio: 1;
-  background: var(--bgColor);
   border: 0.3rem solid var(--accent-color);
   border-radius: 50%;
   top: 50%;
@@ -173,7 +167,6 @@ ul li .date::after {
 /* title descr */
 ul li .title,
 ul li .descr {
-  background: var(--bgColor);
   position: relative;
   padding-inline: 1.5rem;
 }
@@ -246,9 +239,6 @@ ul li .descr::before {
 .credits {
   margin-top: 1rem;
   text-align: right;
-}
-.credits a {
-  color: var(--color);
 }
 
 </style>
