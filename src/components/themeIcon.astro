@@ -29,13 +29,17 @@
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
     }
-      return 'light';
+    return 'light';
   })();
 
   if (theme === 'light') {
     document.documentElement.classList.remove('dark');
+    document.getElementById("navbar").classList.remove('bg-navbar'); // Remueve el color de fondo oscuro
+    document.getElementById("navbar").classList.add('bg-white'); // Agrega el color de fondo claro
   } else {
     document.documentElement.classList.add('dark');
+    document.getElementById("navbar").classList.remove('bg-white'); // Remueve el color de fondo claro
+    document.getElementById("navbar").classList.add('bg-navbar'); // Agrega el color de fondo oscuro
   }
 
   window.localStorage.setItem('theme', theme);
@@ -46,6 +50,15 @@
 
     const isDark = element.classList.contains("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    const navbar = document.getElementById("navbar");
+    if (isDark) {
+      navbar.classList.remove('bg-white');
+      navbar.classList.add('bg-navbar');
+    } else {
+      navbar.classList.remove('bg-navbar');
+      navbar.classList.add('bg-white');
+    }
   }
 
   document.getElementById("themeToggle").addEventListener("click", handleToggleClick);

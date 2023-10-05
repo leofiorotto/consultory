@@ -1,6 +1,5 @@
 ---
 import Container from "@components/container.astro";
-import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
@@ -38,7 +37,7 @@ const menuitems = [
   }
 </style>
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center py-5 font-bold text-lg fixed-navbar border-b border-gray-400">
+  <header class="flex flex-col lg:flex-row justify-between items-center py-5 font-bold text-lg fixed-navbar border-b border-gray-400 {{darkMode ? 'bg-black' : 'bg-red'}}" id="navbar">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg flex pl-8">

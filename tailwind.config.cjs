@@ -10,6 +10,7 @@ module.exports = {
         "book-yellow": "#fce62e",
         "book-gray": "#1a1a1c",
         "book-theme": "#8a3bbf",
+        "navbar": "#020118"
       },
       fontFamily: {
         montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
