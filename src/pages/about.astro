@@ -11,13 +11,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 });
 ---
 <div id="about">
-  <Container class="pb-32 w-full">
-
-    <!-- <Sectionhead>
-      <Fragment slot="title">Nosotros</Fragment>
-      <Fragment slot="desc">Somos un equipo apasionado por lo que hace</Fragment>
-    </Sectionhead> -->
-
+  <Container class="pb-32 pt-32 w-full">
     <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center font-monserrat">Nuestro equipo</h2>
     <p class="mt-4 text-lg text-gray-500 font-montserrat text-center">
       Cada uno es profesional en su area y asi nos complementamos, contamos con 3 personas, todos con el mismo objetivo, brindar un servicio de calidad y que nuestros clientes queden satisfechos </p>
@@ -38,7 +32,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                 background="#ffffff"
                 fit="cover"
                 position="center"
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
               />
             </div>
 

@@ -1,10 +1,10 @@
 ---
 draft: false
-name: "Fernando Cucchiarelli"
-title: "Administrador de redes y servidores"
+name: "Tomas Piccinini"
+title: "Desarrollador full stack"
 avatar: {
-    src: "https://media.licdn.com/dms/image/D4D03AQEjQ8SppPDKOw/profile-displayphoto-shrink_800_800/0/1687531994368?e=1701302400&v=beta&t=ty2fmudQ_WyqxtwUxdQrqKRLB5_grxyLxiBKDMLk1Mg",
-    alt: "Robert Palmer"
+    src: "https://media.licdn.com/dms/image/C4D03AQGMkCe6fOSwmA/profile-displayphoto-shrink_800_800/0/1610407530477?e=1701907200&v=beta&t=3uGejFANEEGrrMYyE8UJiRWzt20ZibpSXiATZPt2Lw8",
+    alt: "Tomas Piccinini"
 }
 publishDate: "2022-11-09 15:39"
 ---

@@ -3,7 +3,23 @@ import { Dropdown as DropdownContainer, DropdownItems } from "astro-navbar";
 const { title, lastItem, children } = Astro.props;
 ---
 
+
 <li class="relative">
+
+  <script>
+    if (typeof document !== 'undefined') {
+      console.log("Script ejecutado"); // Agrega esta línea
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    }
+  </script>
   <DropdownContainer class="group">
     <button
       class="flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 text-gray-600 hover:text-gray-900">

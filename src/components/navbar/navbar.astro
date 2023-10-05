@@ -1,31 +1,24 @@
 ---
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Sobre nosotros",
-    path: "#",
-    children: [
-      { title: "Herramientas", path: "/" },
-      { title: "Tecnologias", path: "#" },
-      { title: "Nuestras estadisticas", path: "#" },
-      { title: "Nuestros clientes", path: "/404" },
-    ],
+    title: "Servicios",
+    path: "#servicios",
   },
   {
-    title: "Servicios",
-    path: "#pricing",
+    title: "¿Como trabajamos?",
+    path: "#herramientas",
+  },
+  {
+    title: "Clientes",
+    path: "#blog",
   },
   {
     title: "Nosotros",
     path: "#about",
-  },
-  {
-    title: "Nuestros proyectos",
-    path: "#blog",
   },
   {
     title: "Contacto",
@@ -33,13 +26,16 @@ const menuitems = [
   },
 ];
 ---
-
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+  <header class="flex flex-col lg:flex-row justify-between items-center my-5 font-bold text-lg">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg flex">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
+          <img
+            src="https://flowbite.com/docs/images/logo.svg"
+            class="h-8 mr-3"
+            alt="FlowBite Logo"
+          />
           <span class="font-bold text-slate-800">Biztek Solutions</span>
         </a>
         <div class="block lg:hidden">
@@ -49,17 +45,10 @@ const menuitems = [
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
-            menuitems.map((item, index) => (
+            menuitems.map((item) => (
               <>
-                {item.children && (
-                  <Dropdown
-                    title={item.title}
-                    children={item.children}
-                    lastItem={index === menuitems.length - 1}
-                  />
-                )}
 
-                {!item.children && (
+                {(
                   <li>
                     <a
                       href={item.path}
@@ -75,4 +64,17 @@ const menuitems = [
       </MenuItems>
     </Astronav>
   </header>
+  <script>
+    if (typeof document !== 'undefined') {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    }
+  </script>
 </Container>
