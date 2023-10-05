@@ -4,7 +4,6 @@ import image from "@astrojs/image";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://astroship.web3templates.com",
   integrations: [
@@ -15,4 +14,8 @@ export default defineConfig({
     mdx(),
     sitemap(),
   ],
+  // Agrega la siguiente configuración para habilitar TypeScript
+  typescript: {
+    check: true,
+  },
 });
