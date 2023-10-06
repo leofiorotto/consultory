@@ -4,45 +4,53 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon";
+import Feature from "../components/Feature1.astro";
 ---
-
-<div id="contact">
-  <Container class="pb-16">
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-8">
-      <div class="pt-36">
-        <p class="text-lg leading-relaxed mt-3 font-bold font-montserrat text-center">
-          Puedes contactar a cualquier persona de nuestro equipo
-        </p>
-        <div class="mt-5 font-montserrat text-center">
-          <div class="flex items-center mt-2 space-x-2 ">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>1422 La plata, CA 1900</span>
-          </div>
-          <div class="flex items-center mt-2 space-x-2 ">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@astroshipstarter.com">leo.fiorotto@hotmail.com</a>
-          </div>
-          <div class="flex items-center mt-2 space-x-2 ">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@astroshipstarter.com">ariancalabrese@hotmail.com</a>
-          </div>
-          <div class="flex items-center mt-2 space-x-2 ">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@astroshipstarter.com">cuchibj@hotmail.com</a>
-          </div>
-          <div class="flex items-center mt-2 space-x-2 ">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+54 2345659559</a
-            >
-          </div>
+<div id="contact" class="grid grid-rows-2 grid-flow-col gap-4">
+  <div class="col-span-1 place-content-center">
+    <div class="font-montserrat shadow-[-1px_1px_15px_15px_#8a3bbf,-1px_1px_15px_10px_#2f855a] mt-32">
+      <section>
+        <Feature icon="mdi:user" title="Pruebe nuestro servicio ahora" class=" font-montserrat">
+          <p class="font-montserrat text-purple-900 font-bold"> De el primer paso hacia la transformacion de su negocio con nuestros servicios expertos. Lo invitamos a probar nuestras soluciones moviles hoy y experimentar la diferencia por si mismo. Desde el desarrollo de software hasta el desarrollo de aplicaciones moviles, estamos aqui para ayudarlo a lograr sus objetivos.</p>
+          <div class=" items-center justify-center flex"></div>
+        </Feature>
+      </section>
+    </div>
+  </div>
+  <div class="row-span-2 col-span-1">
+    <div class="pt-12">
+      <p class="text-lg leading-relaxed mt-3 font-bold font-montserrat text-center">
+        Puedes contactar a cualquier persona de nuestro equipo
+      </p>
+      <div class="mt-5 font-montserrat text-center">
+        <div class="flex items-center mt-2 space-x-2">
+          <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+          <span>1422 La plata, CA 1900</span>
+        </div>
+        <div class="flex items-center mt-2 space-x-2">
+          <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a href="mailto:hello@astroshipstarter.com">leo.fiorotto@hotmail.com</a>
+        </div>
+        <div class="flex items-center mt-2 space-x-2">
+          <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a href="mailto:hello@astroshipstarter.com">ariancalabrese@hotmail.com</a>
+        </div>
+        <div class="flex items-center mt-2 space-x-2">
+          <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a href="mailto:hello@astroshipstarter.com">cuchibj@hotmail.com</a>
+        </div>
+        <div class="flex items-center mt-2 space-x-2">
+          <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a href="tel:+54 (2345) 659 559">+54 2345659559</a>
         </div>
       </div>
-      <div>
-        <Contactform />
-      </div>
     </div>
-  </Container>
-
-
+  </div>
+  <div class="row-span-3 col-span-2 pt-32">
+    <Container class="w-full">
+        <Contactform class="w-full mt-32" />
+    </Container>
+  </div>
 </div>
- 
+
+<style>
+#contact {
+  grid-template-columns: 1fr .5fr .5fr; /* Esto asignará el mismo espacio a las tres columnas */
+}
+</style>

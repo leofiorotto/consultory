@@ -4,8 +4,7 @@ module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {
-      
+    extend: {      
       colors: {
         "book-yellow": "#fce62e",
         "book-gray": "#1a1a1c",

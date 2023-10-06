@@ -16,11 +16,11 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     <p class="mt-4 text-lg text-gray-500 font-montserrat text-center">
       Cada uno es profesional en su area y asi nos complementamos, contamos con 3 personas, todos con el mismo objetivo, brindar un servicio de calidad y que nuestros clientes queden satisfechos </p>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+    <div class="flex flex-col gap-3 mx-auto w-full mt-16">
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
+    <div class="grid md:grid-cols-5 gap-10 mx-auto w-full mt-12">
+      {        
+        publishedTeamMembers.map((teamMemberEntry) => (          
           <div class="group">
             <div class="w-full aspect-square">
               <Picture
