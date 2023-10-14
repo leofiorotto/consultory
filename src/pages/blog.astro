@@ -16,7 +16,7 @@ publishedBlogEntries.sort(function (a, b) {
 
 
 ---
-<div id="blog">
+<div id="blog py-15">
   <div class="pb-32 pt-32 font-montserrat">
       <Container>
         <Sectionhead>
@@ -26,34 +26,25 @@ publishedBlogEntries.sort(function (a, b) {
           </Fragment>
         </Sectionhead>
         <main class="mt-16">
-          <ul class="flex flex-wrap justify-around">
+          <ul class="flex flex-wrap justify-around ">
             {
               publishedBlogEntries.map((blogPostEntry, index) => (
-                <li class="border-gray-300 border-4 rounded-md w-96">
+                <li class="w-96" >
                   <a href={`${blogPostEntry.data.author}`}>
-                    <div class="flex flex-col md:grid-cols-2 md:gap-5 text-left">
+                    <div class="flex flex-col md:grid-cols-2 md:gap-5 text-left ">
                       <Picture
                         src={blogPostEntry.data.image.src}
                         alt={blogPostEntry.data.image.alt}
                         sizes="(max-width: 800px) 150vw, 800px"
-                        widths={[200, 400, 800]}
+                        widths={[400, 600, 1000]}
                         aspectRatio="16:9"
                         background="#ffffff"
                         fit="cover"
                         position="center"
                         loading={index <= 2 ? "eager" : "lazy"}
                         decoding={index <= 2 ? "sync" : "async"}
-                        class="w-full border-b-4 border-gray-300"
+                        class="w-80 h-80 rounded-full border-4 border-white shadow-lg border-purple-200 "
                       />
-                        <div class="text-left pl-4 pb-2">
-                          <span class="text-blue-400 uppercase tracking-wider text-sm font-medium relative left-0">
-                            {blogPostEntry.data.category}
-                          </span>
-          
-                          <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 font-montserrat">
-                            {blogPostEntry.data.title}
-                          </h2>
-                        </div>
                     </div>
                   </a>
                 </li>

@@ -7,7 +7,6 @@ image: {
     alt: "data structures & algorithms"
 }
 publishDate: "2022-11-09 16:39"
-author: "https://leofiorotto.github.io/huddle/"
 category: "Destacado"
 tags: [webdev, tailwindcss, frontend]
 ---
