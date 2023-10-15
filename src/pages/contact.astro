@@ -7,7 +7,7 @@ import { Icon } from "astro-icon";
 import Feature from "../components/Feature1.astro";
 // import ImgWpp from "@assets/wpp.png"
 ---
-<div id="contact" class="grid grid-rows-2 grid-flow-col gap-4">
+<div id="contact" class="grid grid-rows-2 grid-flow-col gap-4 wrapperContact">
   <div class="col-span-1 place-content-center">
     <div class="font-montserrat shadow-[-1px_1px_15px_15px_#8a3bbf,-1px_1px_15px_10px_#2f855a] mt-32">
       <section>
@@ -43,7 +43,7 @@ import Feature from "../components/Feature1.astro";
           </a>
     </div>
   </div>
-  <div class="row-span-3 col-span-2 pt-32">
+  <div id="form" class="row-span-3 col-span-2 pt-32">
     <Container class="w-full">
         <Contactform class="w-full mt-32" />
     </Container>
@@ -53,5 +53,19 @@ import Feature from "../components/Feature1.astro";
 <style>
 #contact {
   grid-template-columns: 1fr .5fr .5fr; /* Esto asignará el mismo espacio a las tres columnas */
+}
+
+@media screen and (max-width: 800px) {
+  #contact {
+    display: flex; 
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #form {
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
 }
 </style>
